@@ -1,5 +1,7 @@
 package basis.util;
 
+import java.util.Objects;
+
 /**
  * @author xy
  * @date 2018/03/18 22:10
@@ -37,5 +39,20 @@ public class student {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        student student = (student) o;
+        return Objects.equals(name, student.name) &&
+                Objects.equals(age, student.age);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(name, age);
     }
 }
