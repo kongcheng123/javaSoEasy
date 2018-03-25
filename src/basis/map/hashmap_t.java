@@ -14,6 +14,9 @@ public class hashmap_t {
 
     }
 
+    /**
+     * 无参数，没有设定值
+     */
     @Test
     public void test(){
         HashMap<String, student> hm = new HashMap<String, student>();
@@ -34,6 +37,27 @@ public class hashmap_t {
         hm.put("e", st);
         hm.put("y", st);
 
+        hm.get("a");
+
+        System.out.println("size:" + hm.size());
+    }
+
+    /**
+     * 有参数，设定值
+     */
+    @Test
+    public void test1(){
+        HashMap<String, student> hm = new HashMap<String, student>(4);
+
+        student st = new student("张三",17);
+
+        hm.put("a", st);
+        hm.put("s", st);
+        hm.put("d", st);
+        hm.put("f", st);
+        hm.put("g", st);
+
+        hm.get("a");
 
         System.out.println("size:" + hm.size());
     }

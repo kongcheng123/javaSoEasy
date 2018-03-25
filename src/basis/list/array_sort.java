@@ -1,5 +1,6 @@
 package basis.list;
 
+import basis.util.student;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -22,6 +23,10 @@ public class array_sort {
         for (int i :a) {
             System.out.println(i);
         }
+
+        student st = new student("q",12);
+        student[] sa = {st};
+        Arrays.sort(sa);
     }
 
     @Test
